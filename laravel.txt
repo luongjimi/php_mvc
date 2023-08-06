@@ -1,0 +1,44 @@
+1. composer create-project laravel/laravel my-app
+
+2. trỏ đến public -> php -S localhost:3001 để chạy sever | hoặc | trong thư mục chính gõ : php artisan serve
+
+3. tao controller : php artisan make:controller
+
+4. set timezone trong /config/app.php/
+
+5. chuyển chế độ local/product trong .env -> php artisan env | hoặc | echo env('tên biến môi trường');
+
+6. chay migration -> php artisan migrate
+
+7. dd($user) -> debug bien user ( $user = new User() )
+
+8. de show ra du lieu cua tat ca user -> $alluser = $user::all();
+
+9. tao [errors] -> 503.blade.php (de thong bao khi sever bao tri)
+
+10. khi ma gui di = phuong thuc post trong trang phuong thuc get 
+	-> tao 1 input (hidden) 
+	-> name="_token" 
+	-> value="echo csrf_token()"
+
+11. neu 1 duong dan co nhieu pthuc thi gop lai = router::match() | hoac | ::any()
+
+12. muon chuyen huong website -> ::redirect()
+
+13. muon gop lai (vd: admin/soa_sp) -> dung ::prefix()->group(function(){ 
+	ben trong nay de router::get | hoac | ::post tuy y });
+
+14.Route::get('/su_li_user/{slug}-{id?}.html', function($slug, $id=null){}) -> where('slug'=>'[a-z_-]+'); 
+	-> SU lI DUONG DAN CO CHU + CODE BAI VIET
+
+15. dat ten cho route: ->name('admin.home') -> dat ten la trang chu admin -> href="admin.home" -> ko can duong dan phuc tap
+
+16. tao middleware de phan quyen user -> php artisan make:middleware tenquyen
+
+17. goi ra router tu controler -> 2 cach
+	- Route::get('/', 'App\Http\Controllers\home_cont@index')->name('home');
+	- Route::get('/', [Ten bien::class, 'ten lenh'])->name('home'); nhung ma phai use /duong dan den controler/
+
+18. <?php echo csrf_field(); ?> -> khi su dung form phai co token
+
+19. controler kieu resoure -> php artisan make:controller admin/UserController --resource 

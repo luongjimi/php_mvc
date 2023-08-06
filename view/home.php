@@ -32,16 +32,19 @@
     </div>
     <br>
     <br>
-    <br>
+    <hr>
+    <div class="tb_admin">
+        hien thi thong bao cua admin -> giong voi trao doi sub
+    </div>
     <hr>
     <br>
-    <div class="flx_cter_img" style="margin-top: 0px; gap: 20px; flex-wrap: wrap;">
+    <div class="flx_cter_img" style="margin-top: 0px; gap: 25px; flex-wrap: wrap;">
         <a href="#" style="color: green;"> Terms of Use </a>
         <a href="#" style="color: green;"> Referral Program </a>
         <a href="#" style="color: green;"> Contact Us </a>
     </div>
     
-    <div style="text-align: center; width: 100%; font-size: 14px;">
+    <div style="text-align: center; width: 100%; font-size: 12px;">
         <?php echo date("Y"); ?> - @diblock.top
     </div>
 </div>
